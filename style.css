@@ -1,0 +1,33 @@
+
+
+.menuMobile {
+  position: absolute;
+  top: 0;
+  left: -100%; /* esconde o menu */
+  width: 150px;
+  height: 100vh;
+  background-color: cadetblue;
+  color: black;
+  transition: all 800ms ease;
+}
+
+.menuMobile.aberto {
+  left: 0%;
+}
+
+.botaoMenu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.botaoMenu:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.quadrado {
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+}
