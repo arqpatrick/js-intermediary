@@ -188,15 +188,37 @@ quadrado.onclick = minhaFuncao
 let toast = document.querySelector('.toast')
 let botaoCadastrar = document.querySelector('#botaoCadastrar')
 
-let campo = document.querySelector('#dado')
+let campo = document.getElementById('dado')
 
 botaoCadastrar.onclick = function () {
   toast.classList.add('visible')
 
-  toast.innerHTML = `Tarefa <b>${campo}</b> cadastrada com sucesso!`
+  toast.innerHTML = `Tarefa <b>${campo.value}</b> cadastrada com sucesso!`
 
   setTimeout(function () {
     toast.classList.remove('visible')
-  }, 5000)
+  }, 5000) // tempo 5000 segundos
 }
 
+//---------------------------------------------------------
+
+// INTERVAL
+
+// let contadorIntervalo = document.querySelector('#contadorIntervalo')
+
+let count = 0
+
+//esse let é para por segurança poder pausar o setinterval
+let intervalo = setInterval (function () {
+  count ++
+  contadorIntervalo.innerText = count
+}, 1000)
+
+//esse botão é para parar o setinterval
+let botaoPausar = document.querySelector('#botaoPausar')
+
+botaoPausar.onclick = function () {
+  clearInterval(intervalo)
+}
+
+//---------------------------------------------------------
