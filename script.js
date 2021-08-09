@@ -146,12 +146,12 @@ botaoTeste4.addEventListener('click', cliqueContador)
 let quadrado = document.querySelector('.quadrado')
 
 //-------------
-// function minhaFuncao (evento) {
-//   console.log(evento)
-// }
+function minhaFuncao (evento) {
+  console.log(evento)
+}
 
-// onclick - clicar
-// quadrado.onclick = minhaFuncao
+//onclick - clicar
+quadrado.onclick = minhaFuncao
 
 // onmousemove - movimentar o mouse dentro do elemento
 //quadrado.onmousemove = minhaFuncao
@@ -171,11 +171,11 @@ let quadrado = document.querySelector('.quadrado')
 
 //-------------
 //exibir a tecla que é pressionada
-function minhaFuncao (evento) {
-  console.log(evento.key)
-}
+// function minhaFuncao (evento) {
+//   console.log(evento.key)
+// }
 
-window.addEventListener('keypress', minhaFuncao)
+// window.addEventListener('keypress', minhaFuncao)
 
 // buscar JS EVENTS
 
@@ -184,3 +184,19 @@ window.addEventListener('keypress', minhaFuncao)
 // TIMEOUT
 
 // Exemplo - um cadastro que quando ativado o botão, aparece um toast com aviso
+
+let toast = document.querySelector('.toast')
+let botaoCadastrar = document.querySelector('#botaoCadastrar')
+
+let campo = document.querySelector('#dado')
+
+botaoCadastrar.onclick = function () {
+  toast.classList.add('visible')
+
+  toast.innerHTML = `Tarefa <b>${campo}</b> cadastrada com sucesso!`
+
+  setTimeout(function () {
+    toast.classList.remove('visible')
+  }, 5000)
+}
+
